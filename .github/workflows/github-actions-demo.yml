@@ -19,14 +19,11 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'  # Specify your Python version
-        # Optionally specify node-version if needed
-        # node-version: '16'
+        python-version: '3.9'  # Example: Use a standard Python version like '3.8' or '3.9'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install distutils
         pip install -r requirements.txt
 
     - name: Run tests
