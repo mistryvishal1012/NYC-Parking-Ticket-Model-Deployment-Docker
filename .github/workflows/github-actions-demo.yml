@@ -20,12 +20,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'  # Specify your Python version
-        # Update Node.js version to 16 or 20 to avoid deprecation notices
-        node-version: '16'  # Choose Node.js version 16 or 20
+        # Optionally specify node-version if needed
+        # node-version: '16'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        python -m pip install distutils
         pip install -r requirements.txt
 
     - name: Run tests
