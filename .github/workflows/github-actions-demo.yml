@@ -20,6 +20,8 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'  # Specify your Python version
+        # Update Node.js version to 16 or 20 to avoid deprecation notices
+        node-version: '16'  # Choose Node.js version 16 or 20
 
     - name: Install dependencies
       run: |
@@ -38,4 +40,3 @@ jobs:
     - name: Run Docker container
       run: |
         docker run -d -p 8501:8501 myapp
-
