@@ -151,7 +151,7 @@ def main():
             parking_data['Time_' + violation_time + ':00'] = 1
             parking_data['DayOfWeek_' + day_of_week] = 1
 
-            with st.spinner("Calculating Your % Reduction on  Parking Ticket !! At 4.54 "):
+            with st.spinner("Calculating Your % Reduction on  Parking Ticket !! For Presntation "):
                 result = predict(parking_data)
                 st.text(f'Your Parking Ticket can be Reduced by {result[0]} %')
                 
